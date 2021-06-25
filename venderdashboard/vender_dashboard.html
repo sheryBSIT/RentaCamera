@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vender_dashboard_style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+<body>
+
+<section class="dashboard">
+  
+
+   <section class="content">
+    
+       <section class="side_bar">
+              <a class="closebtn sidebar-btn"><i class="fas fa-times" ></i></a>
+
+           <div class="dashboard_buttons" id="change_active">
+               <a class="btn active" id="dashboard"><span onclick="dashboard()">Dashboard</span></a>
+               <a class="btn"><span onclick="add_new_product()">Add New Product</span></a>
+               <a class="btn"><span onclick="message_window()">Message Window</span></a>
+               <a class="btn" href="rentinghistory.html"><span>Renting History</span></a> 
+           </div>
+       </section>
+    
+    <div class="header-bar">
+    
+     <div class="sidebar-btn">
+          <i class="fas fa-bars"></i>
+      </div>
+
+       <div class="logo">
+         <a href="index.html"><img src="../image/logo.png"></a>
+      </div>
+
+    </div>
+
+    <div class="body">
+      <div class="container">
+          
+       <!-- dashboard window start-->
+       <div class="dashboard_window" id="dashboard_window"> 
+             <div class="dashboard_form">  
+              <strong>All Product:</strong>
+           <div class="list_selecter">            
+            <select class  ="form-control" name="state" id="maxRows">
+
+                         <option value="5000">Show ALL Rows</option>
+                         <option value="5">5</option>
+                         <option value="10">10</option>
+                         <option value="15">15</option>
+                         <option value="20">20</option>
+                         <option value="50">50</option>
+                         <option value="70">70</option>
+                         <option value="100">100</option>
+            </select>
+           </div>
+            <div class="show_product">          
+        <table id="table-id">
+          <tr>
+            <th>Product Name</th>
+            <th>View Product</th>
+            <th>Edit Detail</th>
+            <th>Delete Product</th>
+
+
+          </tr>
+     
+            <tr>
+            <td></td>
+            <td><a onclick="view_product_detail()"><i class="fas fa-eye"></i></a></td>
+            <td><a href="editproduct.html"><i class='fa fa-edit'></i></a></td>
+            <td><a><i class="fas fa-trash-alt"></i></a></td>
+          </tr>   
+        </table>
+
+        </div>
+
+<!--        Start Pagination -->
+            <div class='pagination-container' >
+                <nav>
+            
+                  <ul class="pagination">
+            
+            <li data-page="prev" >
+                <span> < <span class="sr-only">(current)</span></span>
+            </li>
+                 
+            <li data-page="next" id="prev">
+               <span> > <span class="sr-only">(current)</span></span>
+            </li>
+                  </ul>
+            
+                </nav>
+            </div>
+
+</div> 
+<!--         End of pagination -->
+
+            </div>
+          </div>
+        <!-- dashboard window end --> 
+
+         <section class="message_window" id="message_window">
+           <div class="container">
+             <div class="message_main"> 
+             
+              <div class="client_list"> 
+              <div class="ul_client_list">    
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+              
+             </div>
+              </div>
+
+             <div class="message_box">
+              <div class="message_ul">
+                  <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div> 
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                    <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div> 
+
+                     <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                   
+
+                 </div>   
+                <form action="/action_page.php" class="form-container">
+                    <input placeholder="Type message.." name="msg" required></input>
+                  <button type="submit" class="btn">Send</button>
+                 </form>
+             </div>
+
+           </div>
+
+         </section>
+
+
+          <div class="add_product_box" id="new_product">
+            <div class="product_container">
+             <div class="product_form">  
+              <form>
+                  <strong>Add New Product</strong>
+                  <div class="product_input_field">
+                   <div class="inner_field"> 
+                  <input type="text" placeholder="Product Name"></input> 
+                  <input type="text" placeholder="Product Discription"></input>
+                  <input type="number" placeholder="Price Per Day"></input>
+                  <input type="address" placeholder="Address"></input>
+                   <input type="text" placeholder="Modal Number"></input>
+                   <input type="address" placeholder="Pick Up location"></input>
+                  </div>
+                  <div class="inner_field">
+                  <input type="text" placeholder="company Name"></input> 
+                  <select>
+                      <option value="category" disabled>Select Category</option>
+                      <option value="category">Select Category</option>
+                 </select>
+                  <input type="text" placeholder="City"></input>
+                  <input type="date" placeholder="Date"></input>
+                  <div class="checkbox">
+                  <label>Available </label>
+                  <input type="checkbox" placeholder="City"></input>
+                  </div>
+                  <input type="file" name="fileToUpload" id="picture"  class="select_product_img">
+              </div>
+                  </div>
+                  <div class="submit_button">
+                  <button type="submit">Add Product</button>   
+                  </div>
+              </form>
+            </div>
+            </div>
+          </div>
+
+
+      </div>
+
+
+    </div>
+
+      <div class="footer-bar">
+    
+        <div class="copyright">
+           <a> copyright</a>
+        </div>
+ 
+      </div>
+   </section>
+
+</section>
+
+
+  <section class="single_product_detail" id="single_product_detail">
+      <div class="container">
+      
+       <div class="view_product">
+              <div class="cancle_button" onclick="close_page()"><i class="fas fa-times"></i></div>  
+          <h1>Product Detail</h1>    
+    <section id="produt-detail">
+        <figure><img src="../image/new-one.jpg"></figure>
+        
+        <div class="detail">
+          <strong>Rent a Aputure LS 600d Pro Light Storm Daylight LED Light</strong>
+          
+           <div class="price-box">
+             
+             <div class="price"><small>Price Per Day</small><p>$50</p></div>
+             <div class="price"><small>Availabel date</small><p>$50</p></div>
+             <div class="price"><small>Pick Up Location </small><p>$50</p></div>
+
+           </div>
+
+       </div>
+      
+  </section>
+      <div class="pro_discription">
+        <strong> Product Discription:</strong>
+        <p>An improvement over the original 600d, the LS 600d Pro Light Storm Daylight LED Light from Aputure offers expansive power, control options, and output comparable to a 1200W HMI, augmented by its 55° Hyper Reflector. The precision fixture has a solid
+            <span id="dots">....</span><span id="more"> 5600K color temperature with a high CRI/TLCI rating of 96 that is great for location shooting outdoors, or in areas dominated by other daylight-balanced fixtures such as HMIs. Besides power, control is a driving force in the design of the 600d Pro. The light also has a myriad of wireless control methods, such as the included 2.4 GHz remote, the Sidus Link mobile app, and the built-in wireless DMX control. It has four dimming curves:
+            The LS 600d Pro Light Storm Daylight LED is available in V-Mount or Gold Mount.</span><button onclick="myFunction()" id="myBtn">Read more</button></p>
+       </div>
+       </div>
+
+      </div>
+  </section>
+
+
+<script>
+  
+$('.sidebar-btn').click(function(){
+
+$('.side_bar').toggleClass('test');
+});
+
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+</script>
+
+<script src="vender_dashboard_script.js"></script>
+
+<body>
+  </html>
